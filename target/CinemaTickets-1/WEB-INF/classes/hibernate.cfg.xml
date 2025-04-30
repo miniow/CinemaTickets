@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+<!--        <property name="hibernate.connection.url">jdbc:sqlserver://(localdb)\\MSSQLLocalDB;;databaseName=CinemaDB;integratedSecurity=true;</property>-->
+<!--        <property name="hibernate.connection.url">jdbc:sqlserver:localdb\MSSQLLocalDB;databaseName=CinemaDB;trustServerCertificate=true</property>
+        <property name="hibernate.connection.username">AdrianNowak</property>
+        <property name="hibernate.connection.password">Anzynki</property>-->
+        
+        <!-- Database connection settings for Oracle -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@212.33.90.212:1521:v732</property>
+        <property name="hibernate.connection.username">wnorowski_michal</property>
+        <property name="hibernate.connection.password">wnorowski_michal</property>
+
+        <!-- SQL dialect for Oracle -->
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Automatically update the database schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entities to map -->
+        <mapping class="michal.com.domain.CinemaRoom"/>
+        <mapping class="michal.com.domain.Customer"/>
+        <mapping class="michal.com.domain.Movie"/>
+        <mapping class="michal.com.domain.Reservation"/>
+        <mapping class="michal.com.domain.Screening"/>
+        <mapping class="michal.com.domain.Seat"/>
+
+    </session-factory>
+</hibernate-configuration>
