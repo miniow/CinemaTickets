@@ -4,7 +4,12 @@
  */
 package infrastructure;
 
+import infrastructure.repository.CinemaRoomRepository;
+import infrastructure.repository.SeatRepository;
+import java.util.Arrays;
+import michal.com.domain.model.CinemaRoom;
 import michal.com.domain.model.Customer;
+import michal.com.domain.model.Seat;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,7 +25,7 @@ public class DBTest {
         Transaction t = session.beginTransaction();
 
         Customer customer = Customer.createCustomer(
-            "Michal", "Nowak", "michal.nowak@example.com", "123456789"
+            "michal2", "Nowak", "michal.nowak@example.com", "123456789"
         );
 
         session.save(customer);

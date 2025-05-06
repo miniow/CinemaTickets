@@ -70,6 +70,9 @@ public class Reservation {
         return id;
     }
 
+    public Screening getScreening(){
+        return screening;
+    }
     public List<Seat> getReservedSeats() {
         return reservedSeats;
     }
@@ -92,5 +95,9 @@ public class Reservation {
         this.reservedSeats.forEach(Seat::cancelReservation);
         newSeats.forEach(Seat::reserve);
         this.reservedSeats = newSeats;
+    }
+
+    public Object getSeats() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

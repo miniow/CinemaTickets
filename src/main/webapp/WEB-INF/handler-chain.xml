@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+    <handler-chain>
+        <handler>
+            <handler-name>AuthHandler</handler-name>
+            <handler-class>infrastructure.AuthHandler</handler-class>
+        </handler>
+    </handler-chain>
+</handler-chains>

@@ -12,9 +12,16 @@ import michal.com.domain.model.Seat;
  *
  * @author zymci
  */
-public interface SeatRepository {
-    Optional<Seat> findById(Long id);
+public interface ISeatRepository {
+    Seat save(Seat seat);
+    Seat findById(Long id);
     List<Seat> findAll();
-    void save(Seat seat);
+    void deleteById(Long id);
     void delete(Seat seat);
+    
+    List<Seat> findByRoomId(Long roomId);
+    List<Seat> findByRoomIdAndAvailability(Long roomId, boolean available);
+    List<Seat> findByReservationId(Long reservationId);
+    List<Seat> findByScreeningId(Long screeningId);
+    List<Seat> findByScreeningIdAndAvailability(Long screeningId, boolean available);
 }

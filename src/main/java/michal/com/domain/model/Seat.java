@@ -4,8 +4,10 @@
  */
 package michal.com.domain.model;
 
+import infrastructure.BooleanToNumberConverter;
 import java.util.UUID;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -31,6 +33,7 @@ public class Seat {
     private int seatNumber;
 
     @Column(nullable = false)
+    @Convert(converter = BooleanToNumberConverter.class)
     private boolean isAvailable;
 
     protected Seat() {} 
