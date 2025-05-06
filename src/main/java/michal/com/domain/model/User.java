@@ -18,7 +18,7 @@ import javax.persistence.Table;
  * @author zymci
  */
 @Entity
-@Table(name = "users")
+@Table(name = "rsi_users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,18 +45,18 @@ public class User {
     public Customer getCustomer() { return customer; }
 
     public void setUsername(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.username = username;
     }
 
     public void setPassword(String password) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.password = password;
     }
 
     public void setCustomer(Customer customer) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.customer = customer;
     }
 
     public void setIsAdmin(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.isAdmin = b;
     }
 }

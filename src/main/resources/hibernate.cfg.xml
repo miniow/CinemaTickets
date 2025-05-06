@@ -34,6 +34,7 @@
         <mapping class="michal.com.domain.model.Reservation"/>
         <mapping class="michal.com.domain.model.Screening"/>
         <mapping class="michal.com.domain.model.Seat"/>
+        <mapping class="michal.com.domain.model.User"/>
 
     </session-factory>
 </hibernate-configuration>
